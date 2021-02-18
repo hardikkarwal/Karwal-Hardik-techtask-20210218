@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  button(onclick="home()") Home
+  br
+  form(action="/downloadRequest", method="post")
+    label(for="sourceURL") Enter Source URL 
+    br
+    input(type="text", name="sourceURL", id="sourceURL")
+    br
+    br    
+    label(for="destinationURL") Enter Destination URL 
+    br
+    input(type="text", name="destinationURL", id="destinationURL")
+    br
+    br
+    button(type="submit") Download
+  
+
+  script.
+    function home() {
+       window.location.href = '/';
+    }

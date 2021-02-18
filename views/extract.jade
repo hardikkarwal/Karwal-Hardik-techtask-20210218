@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  button(onclick="home()") Home
+  br
+  form(action="/ExtractRequest", method="post")
+    label(for="sourceURL") Enter Source URL 
+    br
+    input(type="text", name="sourceURL", id="sourceURL")
+    br
+    br    
+    label(for="destinationURL") Enter Destination URL 
+    br
+    input(type="text", name="destinationURL", id="destinationURL")
+    br
+    br
+    button(type="submit") Extract
+  
+
+  script.
+    var home = function() {
+       window.location.href = '/';
+    }

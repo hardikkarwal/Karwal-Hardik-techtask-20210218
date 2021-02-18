@@ -1,0 +1,24 @@
+extends layout
+
+block content
+  button(onclick="uploadData()") Upload Data
+  button(onclick="classifier()" class="classifier-buttons") Classfier
+  br
+  br
+  br
+  form(action="/results", method="post")
+    label(for="testText") Enter Text 
+    br
+    textarea(name="testText", cols="30", rows="10", id="testText")
+    br
+    br
+    button(type="submit") Submit
+  
+
+  script.
+    var uploadData = function() {
+       window.location.href = '/uploadData';
+    }
+    var classifier = function() {
+       window.location.href = '/classifier';
+    }

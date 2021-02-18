@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  button(onclick="something()") Home
+  br
+  br
+  br
+  h1 #{data.name}
+  p accuracy #{data.model.stats.accuracy}
+  br
+  br
+  h2 Tags
+  ul
+    each item in data.model.tags
+      li= item.name
+
+  script.
+    var something = function() {
+       window.location.href = '/';
+    }

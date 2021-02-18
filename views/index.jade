@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  button(onclick="Downlaod()" class="classifier-buttons") Downlaod from URL
+  button(onclick="Extract()" class="classifier-buttons") Extract Zip file
+  button(onclick="Execute()" class="classifier-buttons") Execute
+  br
+  
+  script.
+    function Downlaod() {
+       window.location.href = '/downloadData';
+    }
+    
+    function Extract() {
+       window.location.href = '/extractData';
+    }    
+    
+    function Execute() {
+       window.location.href = '/executeData';
+    }

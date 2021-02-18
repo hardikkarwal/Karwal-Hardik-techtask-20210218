@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  button(onclick="something()") Home
+  br
+  br
+  br
+  p Text: #{data[0].text}
+  ul
+    each item in data[0].classifications
+      li= `confidence: ${item.confidence}`
+      li(class="last-item")= `Tag: ${item.tag_name}`
+
+  script.
+    var something = function() {
+       window.location.href = '/';
+    }

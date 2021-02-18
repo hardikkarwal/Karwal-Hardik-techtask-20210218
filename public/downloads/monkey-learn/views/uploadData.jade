@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  button(onclick="something()") Home
+  br
+  br
+  br
+  form(action="/upload", method="post")
+    label(for="dataText") Enter Text 
+    br
+    textarea(name="dataText", cols="30", rows="10", id="dataText")
+    br
+    br
+    label(for="dataTag") Enter Suitable Tag for the Text
+    br
+    input(type="text", name="dataTag", id="dataTag")
+    br
+    br
+    button(type="submit") Submit
+  
+
+  script.
+    var something = function() {
+       window.location.href = '/';
+    }
